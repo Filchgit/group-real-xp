@@ -1,2 +1,6 @@
 <h1>Experiences#edit</h1>
 <p>Find me in app/views/experiences/edit.html.erb</p>
+
+<p>Current Experience to edit : <%= @experience.title %> </p>
+
+<%= render 'form', experience: @experience %>
