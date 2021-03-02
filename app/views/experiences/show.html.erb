@@ -4,6 +4,15 @@
 <br>
 <p> <%= @experience.description %>  </p>
 <p> $<%= @experience.unit_current_price %> </p>
+ <!-- experimenting on how to grab only one photo -->
+ <!--  <% first_photo = @experience.photos.first  %> -->
+ <!--  <%= cl_image_tag first_photo.key, height: 300, width: 400, crop: :fill %> -->
 
+<% @experience.photos.each do |photo| %>
+
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
+<p>Do you guys want a button for book now here ?! or is that on Dashboard?</p>
 
 </div>
