@@ -1,2 +1,19 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<div class="container-show">
+  <div class="container-main m-3">
+  <div class="column-left mr-5">
+    <div class="container-nav">
+      <h3>Create A Booking</h3>
+    <hr />
+    </div>
+    <div class="container-info pr-3">
+      <div>
+        <%= simple_form_for [@experience, @booking] do |f| %>
+          <%= @experience.id %>
+          <%= f.input :booked_start_date %>
+          <%= f.input :booked_end_date %>
+          <%= f.submit "Add booking", class: "btn btn-primary" %>
+        <% end %>
+      <div>
+    </div>
+  </div>
+  
