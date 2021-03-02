@@ -1,7 +1,9 @@
 class ExperiencesController < ApplicationController
-  before_action :set_experience, only: %i[ edit, update ]
+
+  before_action :set_experience, only: %i[ edit, update, show ]
 
   def index
+    @experiences = Experience.all
   end
 
   def show
@@ -17,7 +19,7 @@ class ExperiencesController < ApplicationController
     @experience.user_id = current_user.id
         if @experience.save
 
-       redirect_to @experience 
+       redirect_to @experience
     else
        render :new
     end
@@ -37,13 +39,13 @@ class ExperiencesController < ApplicationController
     @experience.user_id = current_user.id
     if @experience.update(experience_params)
 
-      redirect_to @experience 
+      redirect_to @experience
    else
-      render :edit
+     render :edit
    end
   end
 
-  private 
+  private
 
   def set_experience
     @experience = Experience.find(params[:id])
