@@ -35,10 +35,10 @@ class ExperiencesController < ApplicationController
   end
 
   def update
-    # @experience = Experience.find(params[:id])
+    @experience = Experience.find(params[:id])
+  
     @experience.user_id = current_user.id
     if @experience.update(experience_params)
-
       redirect_to @experience
    else
      render :edit
@@ -52,7 +52,7 @@ class ExperiencesController < ApplicationController
   end
 
   def experience_params
-    params.require(:experience).permit(:title, :description, :unit_current_price)
+    params.require(:experience).permit(:title, :description, :unit_current_price, photos: [])
   end
 
 end

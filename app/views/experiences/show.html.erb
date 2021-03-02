@@ -5,5 +5,8 @@
 <p> <%= @experience.description %>  </p>
 <p> $<%= @experience.unit_current_price %> </p>
 
+<% @experience.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 
 </div>
