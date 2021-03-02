@@ -6,18 +6,13 @@
       <% @experiences.each do |experience| %>
         <div class="card">
           <div class="card-body">
-
             <!-- <%= experience.photos.first.nil? ? "random" : "first" %> -->
-
-            <%   if experience.photos.first.nil? == true  %>
-             <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
-            <%   else %>
-             <% first_photo = experience.photos.first  %>
-
-             <img class="card-img-top" <%= cl_image_tag first_photo.key,  crop: :fill %>  >
-            <%   end %>
-
-           
+            <% if experience.photos.first.nil? == true  %>
+              <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+            <% else %>
+              <% first_photo = experience.photos.first  %>
+              <img class="card-img-top" <%= cl_image_tag first_photo.key,  crop: :fill %>  >
+            <% end %>          
             <h5 class="card-title"><%= experience.title %></h5>
             <p class="card-text max-lines"><%= experience.description %></p>
 
