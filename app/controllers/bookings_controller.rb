@@ -1,10 +1,12 @@
 class BookingsController < ApplicationController
+
+  before_action :set_booking, only: %i[edit, update, show]
+
   def index
     @bookings = Booking.all
   end
 
   def show
-    @booking = Booking.find(params[:id])
   end
 
   def new
@@ -32,6 +34,7 @@ class BookingsController < ApplicationController
     @experience = Experience.find(params[:experience_id])
     @booking = Booking.create(booking_params)
     @booking.experience = @experience
+    @booking.user_id = current_user.id
 
     if @booking.save
       redirect_to experience_path(@experience), notice: 'successfully created a booking'
@@ -40,9 +43,13 @@ class BookingsController < ApplicationController
     end
   end
 
-  private 
+  private
+  
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
 
   def booking_params
-    params.require(:booking).permit(:experience_id, :user_id, :status, :payment_status, :total_price, :book_start_date, :book_end_date)
+    params.require(:booking).permit(:experience_id, :user_id, :status, :payment_status, :total_price, :booked_start_date, :booked_end_date)
   end
 end
