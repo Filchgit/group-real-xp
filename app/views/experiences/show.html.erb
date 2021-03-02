@@ -10,10 +10,10 @@
 <p> $<%= @experience.unit_current_price %> </p>
 
 
+
 <% first_photo = @experience.photos.first  %>
 
   <%= cl_image_tag first_photo.key, height: 300, width: 400, crop: :fill %>
-
 
 
 <% @experience.photos.each do |photo| %>
