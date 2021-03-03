@@ -10,20 +10,11 @@ user = User.create(email: "user1@user.com", password: "password" )
 
 
 Experience.create!(
-user_id: user.id,
-title: "Scuba Diving",
-description: "Best Scuba class in Melbourne",
-unit_current_price: "300"
-  )
-Experience.create!(
-user_id: user.id,
-title: "Sky Diving",
-description: "Best Sky diving class in Melbourne",
-unit_current_price: "2000"
-  )
-Experience.create!(
-user_id: user.id,
-title: "Deep Sea Diving",
-description: "Best Deep Sea Diving class in Melbourne",
-unit_current_price: "4000"
-  )
+user_id: 1,
+title: "Mad Dog's Sick Skydiving",
+description: "Let Mad dog take you up in his plane and jump out solo at 12,000 meters after one quick morning of intensive fun filled demos on technique. Don't worry if you think you will freeze up, a friendly push will get you out there. Yeehaaw!!! Please not that all particpants must have mandatory life insurance and sign full risk waivers,",
+location: "Melbourne Airport",
+unit_current_price: 750,
+)
+
+
