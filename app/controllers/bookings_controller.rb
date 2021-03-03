@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @user = current_user
     @experience = Experience.find(params[:experience_id])
     @booking = Booking.new
   end
@@ -17,8 +18,6 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-
-    redirect_to experience_path(@experience)
   end
 
   # def edit
