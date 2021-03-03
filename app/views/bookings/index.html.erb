@@ -1,11 +1,14 @@
-<div>
-     <div>
-        <div>booking details</div>
-        <ul>
-          <% @bookings.each do |book| %>
-            <li><%= book.user_id %> - <%= book.status %></li>
-          <% end %>
-        </ul>
+<div class="container">
+  <div class="row ">
+    <% @bookings.each do |book| %>
+      <div class="card col-4 p-2 m-4" style="width: 30px;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= book.booked_start_date %></h5>
+          <p class="card-text"><%= book.booked_end_date %></p>
+          <h1><%= link_to icon('fa', 'trash-alt'), experience_bookings_path(@bookings), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></h1>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
+</div>
