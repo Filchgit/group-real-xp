@@ -8,6 +8,7 @@
     <div class="container-info pr-3">
       <div>
         <%= simple_form_for [@experience, @booking] do |f| %>
+          <% %>
           <%= @experience.id %>
           <%= f.input :booked_start_date %>
           <%= f.input :booked_end_date %>
@@ -15,5 +16,3 @@
         <% end %>
       <div>
     </div>
-  </div>
-  

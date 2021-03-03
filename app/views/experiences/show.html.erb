@@ -1,5 +1,4 @@
 <div container-fluid>
-
 <h1> <%= @experience.title %>  </h1>
 <br>
 <p> <%= @experience.description %>  </p>
@@ -12,7 +11,6 @@
 
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
+<h1><%= link_to icon('fa', 'trash-alt'), experience_path(@experience), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></h1>
 
-<p>Do you guys want a button for book now here ?! or is that on Dashboard?</p>
-
-</div>
+<h1><%= link_to "make a booking now!",  new_experience_booking_path(@experience), class: "btn btn-primary"%></h1>
