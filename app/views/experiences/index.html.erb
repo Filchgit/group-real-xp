@@ -1,20 +1,18 @@
 
 
 <div class="container">
-
-  <h1>Experiences</h1>
-
+  <h1>Experiences</h1><button class=""> <%= link_to "Add your Xperience now!", new_experience_path(@experience) %> </button>
   <div class="card-columns">
       <% @experiences.each do |experience| %>
         <div class="card">
           <div class="card-body">
-            <!-- <%= experience.photos.first.nil? ? "random" : "first" %> -->
+
             <% if experience.photos.first.nil? == true  %>
               <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
             <% else %>
               <% first_photo = experience.photos.first  %>
               <img class="card-img-top" <%= cl_image_tag first_photo.key,  crop: :fill %>  >
-            <% end %>          
+            <% end %>
             <h5 class="card-title"><%= experience.title %></h5>
             <p class="card-text max-lines"><%= experience.description %></p>
             <%= link_to experience do %>
