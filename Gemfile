@@ -69,3 +69,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # need to use user_side upload instead of assets for pics and I think video
 gem 'cloudinary', '~> 1.16.0'
+
+# adding geocode gem to translate adress strings into co-ords
+gem 'geocoder' 
