@@ -1,7 +1,7 @@
 
 
 <div class="container">
-  <h1>Experiences</h1>
+  <h1>Experiences</h1><button class=""> <%= link_to "make a booking now!", new_experience_path(@experience) %> </button>
   <div class="card-columns">
       <% @experiences.each do |experience| %>
         <div class="card">
