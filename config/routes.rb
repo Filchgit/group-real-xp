@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   resources :experiences, only: [:index, :show, :new, :create, :edit, :destroy, :update] do
     resources :bookings, only: [:index, :show, :new, :destroy, :update, :edit, :create]
   end
-  get '/dashboard' => 'pages#dashboard'
+  resource :dashboard, only: [:show]
 end
