@@ -4,7 +4,7 @@ class ExperiencesController < ApplicationController
 
   def index
     @experiences = Experience.all
-
+   
     # the `geocoded` scope filters only experiences with coordinates (latitude & longitude)
     @markers = @experiences.geocoded.map do |experience|
       {
