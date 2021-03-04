@@ -10,8 +10,8 @@
         <%= simple_form_for [@experience, @booking] do |f| %>
           <% %>
           <%= @experience.id %>
-          <%= f.input :booked_start_date %>
-          <%= f.input :booked_end_date %>
+          <%= f.input :booked_start_date, as: :string, input_html: { id: "start_date"} %>
+          <%= f.input :booked_end_date, as: :string, input_html: { id: "end_date"} %>
           <%= f.submit "Add booking", class: "btn btn-primary" %>
         <% end %>
       <div>
