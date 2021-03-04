@@ -19,4 +19,10 @@ Rails.application.routes.draw do
     resources :bookings, only: [:index, :show, :new, :destroy, :update, :edit, :create]
   end
   resource :dashboard, only: [:show]
+
+  resources :bookings, only: [:show] do
+    member do
+      get :confirmation
+    end
+  end
 end
