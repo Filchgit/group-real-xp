@@ -2,12 +2,16 @@
 {
 width: auto;
 height: auto;
+font-size: 30px;
+margin:30px;
 }  
-
+.title-edit{
+  text-align: center;
+}
 .edit_experience{
 
   font-family: 'Open Sans';
-  font-size: 24px;
+ 
   background-color: #D4D4D4;
   
   
@@ -17,8 +21,32 @@ height: auto;
    background-color: blueviolet;
   }
   
+  input[type=submit]{
+    margin: 10px;
+    background-color: rgb(69, 142, 202);
+    color:ghostwhite;
+    radius: 4px;
+    font-size: 30px;
+    margin-left: 300px;
+  }
   
-  
+  input[type=submit]:hover{
+    background-color: rgb(41, 110, 189);
+  }
+  .experience_photos{
+    margin-left: 150px;
+    font-size: 30px; 
+    
+  }
+  #experience_unit_current_price{
+    font-size: 30px;
+  }
+  #experience_location{
+    font-size: 30px;
+  }
+  #experience_title{
+    font-size: 30px;
+  }
   #experience_description {
     resize: vertical;
     min-height: 200px;

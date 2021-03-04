@@ -1,13 +1,17 @@
-<h1>Change your Experience here</h1>
-<p>We understand. Things change. Prices go up and down. More locations become available.</p>
+<div class="test">
+  <div class ="title-edit">
+    <h1>Change your Experience here</h1>
+  </div>
+  
+  <p>We understand. Things change. Prices go up and down. More locations become available.</p>
 
-<p> Whatever you need to do, you can quickly update your guided experience here.</p>
+  <p> Whatever you need to do, you can quickly update your guided experience here.</p>
 
-<p>Current Experience to edit : <%= @experience.title %> </p>
+  <p>Current Experience to edit : <%= @experience.title %> </p>
 
-<%= render 'form', experience: @experience, id: 'new_exp_form' %>
+  <%= render 'form', experience: @experience, id: 'new_exp_form' %>
 
-
+</div>
 
 
 
