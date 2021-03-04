@@ -26,7 +26,28 @@
                 <div class="card-body">
                   <h5 class="card-title"><%= book.experience.title %></h5>
                   <p class="card-text"><%= book.experience.description %></p>
-                    <h1><%= link_to icon('fa', 'trash-alt'), booking_path(book), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></h1>
+                  <p class="card-text"><%= book.experience.unit_current_price %></p>
+                  <% book.payment_status = "pending payment" %>
+                  <p class="card-text"><%= book.payment_status %></p>
+                    <h1><%= link_to "cancel booking", booking_path(book), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></h1>
+                    <%= form_tag charges_path do %>
+                    <article>
+                    <% if flash[:error].present? %>
+                      <div id ="error_explanation">
+                      <p><%= flash[:error] %></p>
+                      </div>
+                      <% end %>
+                    <label class = "amount">
+                    <span>Amount: $5.00</span></label>
+                    </article>
+
+                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                             data-key= "<%= Rails.configuration.stripe[:publishable_key] %>"
+                             data-description= "payment for exp"
+                             data-amount = "500"
+                             data-locale = "auto"
+                    ></script>
+                    <% end %>
                 </div>
               </div>
             <% end %>
@@ -49,17 +70,14 @@
                 <div class="card-body">
                   <h5 class="card-title"><%= exp.title %></h5>
                   <p class="card-text"><%= exp.description %></p>
-                  <h1><%= link_to icon('fa', 'trash-alt'), experience_path(exp), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></h1>
+                  <h1><%= link_to "remove this listing", experience_path(exp), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></h1>
                 </div>
               </div>
             <% end %>
-  </div>
-</div>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 </div>
-
-
-

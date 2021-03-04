@@ -18,11 +18,14 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
+
+    redirect_to dashboard_path
   end
 
-  # def edit
-  #   @booking = Booking.find(params[:id])
-  # end
+   def edit
+     @user = current_user
+     @booking = Booking.find(params[:id])
+   end
 
   # def update
   #   @booking = Booking.find(params[:id])

@@ -11,6 +11,5 @@
 
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
-<h1><%= link_to icon('fa', 'trash-alt'), experience_path(@experience), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></h1>
 
 <h1><%= link_to "make a booking now!",  new_experience_booking_path(@experience), class: "btn btn-primary"%></h1>

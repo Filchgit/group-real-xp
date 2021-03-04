@@ -9,10 +9,11 @@
       <div>
         <%= simple_form_for [@experience, @booking] do |f| %>
           <% %>
-          <%= @experience.id %>
+          <%= @experience.title %>
           <%= f.input :booked_start_date %>
           <%= f.input :booked_end_date %>
           <%= f.submit "Add booking", class: "btn btn-primary" %>
         <% end %>
       <div>
     </div>
+  
