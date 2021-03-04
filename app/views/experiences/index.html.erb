@@ -14,13 +14,13 @@
                 <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
               <% else %>
                 <% first_photo = experience.photos.first  %>
-                <img class="card-img-top" <%= cl_image_tag first_photo.key,  crop: :fill %>  >
+                <img class="card-img-top" <%= cl_image_tag first_photo.key, crop: :fill %>  >
               <% end %>
             <div class="card-body">
            
               
               <h2 class="card-title"><%= experience.title %></h2>
-              <p class="card-text max-lines"><%= experience.description %></p>
+              <p class="card-text max-lines"> <%= experience.description %></p>
              
            
             

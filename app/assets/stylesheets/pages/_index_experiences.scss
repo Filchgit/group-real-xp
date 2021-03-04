@@ -27,12 +27,12 @@ display:flex ;
   margin: 16px;
   box-shadow: 4px 4px 4px  rgb(83, 83, 85);
   justify-content: center;
-  border-radius: 12px;
-  :hover{
-    background-color: rgb(63,136,197);
-    color:cornsilk;
+  
   }
 
+ .card:hover{
+    background-color: rgb(63,136,197);
+    color:cornsilk;
 }
 .mapbox-container {
   display: flex;

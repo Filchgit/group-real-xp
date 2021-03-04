@@ -14,12 +14,13 @@ justify-content: center;
 max-width: 1500px;
 justify-content: center;
 background-color: rgb(244,245,247);
-
+border: solid 4px rgb(41, 110, 189);
 
 }  
 .central{
  display: block;
  justify-content: center;
+
 }
 .title-edit{
  text-align: center;
@@ -27,13 +28,13 @@ background-color: rgb(244,245,247);
 .new_experience{
 
  font-family: 'Open Sans';
-
- background-color: #D4D4D4;
+ 
+//  background-color: #D4D4D4;
  margin: 0 10px;
 }
  .form_control {
   font-size: 30px;
- 
+  background-color: rgb(69, 142, 202);
  }
  
  input[type=submit]{
