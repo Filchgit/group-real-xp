@@ -1,0 +1,30 @@
+.test
+{
+width: auto;
+height: auto;
+}  
+
+.edit_experience{
+
+  font-family: 'Open Sans';
+  font-size: 24px;
+  background-color: #D4D4D4;
+  
+  
+  .form_control {
+   font-size: 30px;
+  
+   background-color: blueviolet;
+  }
+  
+  
+  
+  #experience_description {
+    resize: vertical;
+    min-height: 200px;
+    font-family: 'Open Sans';
+   
+    overflow-wrap: break-word ;
+    padding: 6px 20px;
+   }
+  }

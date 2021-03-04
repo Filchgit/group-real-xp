@@ -4,9 +4,28 @@ class ExperiencesController < ApplicationController
 
   def index
     @experiences = Experience.all
+   
+    # the `geocoded` scope filters only experiences with coordinates (latitude & longitude)
+    @markers = @experiences.geocoded.map do |experience|
+      {
+        lat: experience.latitude,
+        lng: experience.longitude,
+        # the infor window is so we can pass more info about experiences to our view
+        # it links to a partial containing the content of our info window
+        infoWindow: render_to_string(partial: "info_window", locals: { experience: experience })
+      }
+    end
   end
 
   def show
+    @experiences = Experience.all
+    @markers =
+      [{
+          lat: @experience.latitude,
+          lng: @experience.longitude,
+
+          infoWindow: render_to_string(partial: "info_window", locals: { experience: @experience })
+       }]
   end
 
   def new
@@ -33,7 +52,7 @@ class ExperiencesController < ApplicationController
 
   def destroy
     @experience = Experience.find(params[:id])
-    raise
+ 
     @experience.destroy
 
     redirect_to experiences_path
@@ -57,7 +76,7 @@ class ExperiencesController < ApplicationController
   end
 
   def experience_params
-    params.require(:experience).permit(:title, :description, :unit_current_price, photos: [])
+    params.require(:experience).permit(:title, :description, :unit_current_price, :location, photos: [])
   end
 
 end
