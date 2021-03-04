@@ -1,0 +1,44 @@
+.content {
+background-color : aquamarine;
+display:flex ;
+}
+.my-cards {  
+  flex-basis: 75%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 16px;
+  margin: 16px;
+
+  a{
+  text-decoration: none;
+  color: rgb(28,49,68);
+   } 
+}
+
+.page-title{
+  text-align: center;
+}
+
+.card{
+  max-width: 550px;
+  margin: 16px;
+  
+  :hover{
+    background-color: rgb(63,136,197);
+    color:cornsilk;
+  }
+
+}
+.mapbox-container {
+  flex-basis: 25%;
+  height: 100vh;
+  position: sticky;
+  top: 200px;
+  min-width: 400px;
+  
+}
+
+
+
