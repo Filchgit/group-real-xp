@@ -1,30 +1,14 @@
-<div class="test">
-  <div class ="title-edit">
-    <h1>Change your Experience here</h1>
+<div class = "outer_wrapper">
+  <div class="test">
+
+    <div class="title-edit">
+      <h1>Change your Experience here</h1>
+      <p>We understand. Things change. Prices go up and down. More locations become available.</p>
+      <p> Whatever you need to do, you can quickly update your guided experience here.</p>
+      <h2>Current Experience to edit : <%= @experience.title %> </h2>
+    </div>
+    <div class="central"> 
+        <%= render 'form', experience: @experience, id: 'new_exp_form' %>
+      </div>
   </div>
-  
-  <p>We understand. Things change. Prices go up and down. More locations become available.</p>
-
-  <p> Whatever you need to do, you can quickly update your guided experience here.</p>
-
-  <p>Current Experience to edit : <%= @experience.title %> </p>
-
-  <%= render 'form', experience: @experience, id: 'new_exp_form' %>
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p>Experiences#edit<p>
-<p>Find me in app/views/experiences/edit.html.erb</p>

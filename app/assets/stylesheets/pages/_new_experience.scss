@@ -1,0 +1,76 @@
+
+ .outer_wrapper{
+  background-color: white;
+}
+.test
+{
+width: auto;
+height: auto;
+font-size: 30px;
+margin:30px;
+font-size: 30px;
+margin: 0 auto;
+justify-content: center;
+max-width: 1500px;
+justify-content: center;
+background-color: rgb(244,245,247);
+
+
+}  
+.central{
+ display: block;
+ justify-content: center;
+}
+.title-edit{
+ text-align: center;
+}
+.new_experience{
+
+ font-family: 'Open Sans';
+
+ background-color: #D4D4D4;
+ margin: 0 10px;
+}
+ .form_control {
+  font-size: 30px;
+ 
+ }
+ 
+ input[type=submit]{
+   margin: 10px;
+   background-color: rgb(69, 142, 202);
+   color:ghostwhite;
+   radius: 4px;
+   font-size: 30px;
+   margin-left: 300px;
+ }
+ 
+ input[type=submit]:hover{
+   background-color: rgb(41, 110, 189);
+ }
+ .experience_photos{
+   margin-left: 150px;
+   font-size: 30px; 
+   
+ }
+ #experience_unit_current_price{
+   font-size: 30px;
+   text-align: center;
+ }
+ #experience_location{
+   font-size: 30px;
+    text-align: center;
+ }
+ #experience_title{
+   font-size: 30px;
+   text-align: center;
+ }
+ #experience_description {
+   resize: vertical;
+   min-height: 200px;
+   font-family: 'Open Sans';
+  
+   overflow-wrap: break-word ;
+   padding: 6px 20px;
+  }
+ 

@@ -1,24 +1,39 @@
+
+ .outer_wrapper{
+   background-color: white;
+ }
 .test
 {
 width: auto;
 height: auto;
 font-size: 30px;
 margin:30px;
+font-size: 30px;
+margin: 0 auto;
+justify-content: center;
+max-width: 1500px;
+justify-content: center;
+background-color: rgb(244,245,247);
+
+
 }  
+.central{
+  display: block;
+  justify-content: center;
+}
 .title-edit{
   text-align: center;
 }
-.edit_experience{
+.simple_form{
 
   font-family: 'Open Sans';
  
   background-color: #D4D4D4;
-  
-  
+  margin: 0 10px;
+}
   .form_control {
    font-size: 30px;
   
-   background-color: blueviolet;
   }
   
   input[type=submit]{
@@ -40,12 +55,15 @@ margin:30px;
   }
   #experience_unit_current_price{
     font-size: 30px;
+    text-align: center;
   }
   #experience_location{
     font-size: 30px;
+     text-align: center;
   }
   #experience_title{
     font-size: 30px;
+    text-align: center;
   }
   #experience_description {
     resize: vertical;
@@ -55,4 +73,4 @@ margin:30px;
     overflow-wrap: break-word ;
     padding: 6px 20px;
    }
-  }
+  
