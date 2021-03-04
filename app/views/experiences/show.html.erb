@@ -1,11 +1,15 @@
 <div container-fluid>
 <h1> <%= @experience.title %>  </h1>
+<h4> AT: <div id = "experience_location"> <%= @experience.location %> </div></hh4>
 <br>
 <p> <%= @experience.description %>  </p>
 <p> $<%= @experience.unit_current_price %> </p>
- <!-- experimenting on how to grab only one photo -->
- <!--  <% first_photo = @experience.photos.first  %> -->
- <!--  <%= cl_image_tag first_photo.key, height: 300, width: 400, crop: :fill %> -->
+ 
+  <div id="map"
+    style="width: 100%; height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 
 <% @experience.photos.each do |photo| %>
 

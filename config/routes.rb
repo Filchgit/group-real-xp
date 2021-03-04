@@ -24,4 +24,10 @@ Rails.application.routes.draw do
   resources :bookings, only: [:destroy]
 
   resource :dashboard, only: [:show]
+
+  resources :bookings, only: [:show] do
+    member do
+      get :confirmation
+    end
+  end
 end

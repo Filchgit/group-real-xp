@@ -1,4 +1,4 @@
-<div class="container-show">
+<!-- <div class="container-show">
   <div class="container-main m-3">
   <div class="column-left mr-5">
     <div class="container-nav">
@@ -9,11 +9,27 @@
       <div>
         <%= simple_form_for [@experience, @booking] do |f| %>
           <% %>
-          <%= @experience.title %>
-          <%= f.input :booked_start_date %>
-          <%= f.input :booked_end_date %>
+          <%= @experience.id %>
+          <%= f.input :booked_start_date, as: :string, input_html: { id: "start_date"} %>
+          <%= f.input :booked_end_date, as: :string, input_html: { id: "end_date"} %>
+          <%= f.submit "Add booking", class: "btn btn-primary" %>
+        <% end %>
+      <div>
+    </div> -->
+
+
+<div class="container">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+<h3>Create A Booking</h3>
+    <%= simple_form_for [@experience, @booking] do |f| %>
+          <% %>
+          <%= @experience.id %>
+          <%= f.input :booked_start_date, as: :string, input_html: { id: "start_date"} %>
+          <%= f.input :booked_end_date, as: :string, input_html: { id: "end_date"} %>
           <%= f.submit "Add booking", class: "btn btn-primary" %>
         <% end %>
       <div>
     </div>
-  
+
+
+<h3 id="total-price" data-day-price="<%= @experience.unit_current_price %>"></h3>
