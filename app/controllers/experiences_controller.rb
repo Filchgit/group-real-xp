@@ -3,7 +3,12 @@ class ExperiencesController < ApplicationController
   before_action :set_experience, only: %i[ edit, update, show ]
 
   def index
-    @experiences = Experience.all
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR description ILIKE :query"
+      @experiences = Experience.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @experiences = Experience.all
+    end
   end
 
   def show
@@ -33,10 +38,7 @@ class ExperiencesController < ApplicationController
 
   def destroy
     @experience = Experience.find(params[:id])
-    raise
     @experience.destroy
-
-    redirect_to experiences_path
   end
 
   def update

@@ -1,4 +1,11 @@
-
+<%= form_tag experiences_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find An Experience"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 
 <div class="container">
   <h1>Experiences</h1><button class=""> <%= link_to "Add your Xperience now!", new_experience_path(@experience) %> </button>
