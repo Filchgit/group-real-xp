@@ -1,8 +1,10 @@
-<%=  simple_form_for [@experience] do |f| %>
+<%=  simple_form_for [@experience]   do |f| %>
   <%= f.input :title, label: "How should we label your experience to buyers?" %>
-  <%= f.input :description, label: "Describe the full experience on offer" %>
+  <%= f.input :description, as: :text, :input_html => { class: 'test', :cols => 80, :rows => 10 } %>
   <%=  f.input :unit_current_price, label: "Price per day of experience"  %>
    <%= f.input :location, label: "Where do people meet you to start this experience?" %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
  <%= f.button :submit %>
 <% end %>
+
+ 
