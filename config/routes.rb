@@ -15,9 +15,14 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :experiences, only: [:index, :show, :new, :create, :edit, :destroy, :update] do
-    resources :bookings, only: [:index, :show, :new, :destroy, :update, :edit, :create]
+  resources :experiences do
+    resources :bookings, only: [:index, :show, :new, :update, :edit, :create]
   end
+
+  resources :charges
+
+  resources :bookings, only: [:destroy]
+
   resource :dashboard, only: [:show]
 
   resources :bookings, only: [:show] do
