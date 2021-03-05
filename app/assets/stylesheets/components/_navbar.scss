@@ -1,6 +1,21 @@
+
+
+.homeIcon{
+  img{
+    width: 38px;
+  }}
+
+.icon-tabler-dashboard{
+  stroke: white;
+}
+.profiler-button{
+  display: none;
+}
+
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #3F88C5;
 }
 
 .navbar-lewagon .navbar-collapse {

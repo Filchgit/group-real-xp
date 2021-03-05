@@ -13,25 +13,40 @@
     <div class="tab-content" id="v-pills-tabContent">
 
       <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+        <ul class="list-group">
 
-        <% @bookings.each do |booking| %>
+          <% @bookings.each do |booking| %>
+          <li class="list-group-item" aria-current="true">
 
-        <h3> <%= booking.experience.title %> </h3>
-        <p> <%= booking.experience.description %> </p>
-        <% end %>
+            <h3><%= booking.experience.title %></h3>
+            <p><%= booking.experience.description %> </p>  </li>
+          <% end %>
+        </ul>
       </div>
 
+<!--
+  <li class="list-group-item">A second item</li>
+  <li class="list-group-item">A third item</li>
+  <li class="list-group-item">A fourth item</li>
+  <li class="list-group-item">And a fifth one</li>
+ -->
 
       <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-        <% @experiences.each do |experience| %>
-        <h3> <%= experience.title %> </h3>
-        <p> <%= experience.description %> </p>
+        <ul class="list-group">
+          <% @experiences.each do |experience| %>
+           <li class="list-group-item" aria-current="true">
+
+              <h3> <%= experience.title %> </h3>
+              <p> <%= experience.description %> </p>
+            </li>
         <% end %>
-      </div>
+      </ul>
 
     </div>
   </div>
 </div>
+
+
 
 
 <div class="container">
