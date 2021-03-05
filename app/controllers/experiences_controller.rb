@@ -8,7 +8,8 @@ class ExperiencesController < ApplicationController
       @experiences = Experience.where(sql_query, query: "%#{params[:query]}%")
     else
       @experiences = Experience.all
-   
+    end
+    
     # the `geocoded` scope filters only experiences with coordinates (latitude & longitude)
     @markers = @experiences.geocoded.map do |experience|
       {
@@ -56,10 +57,6 @@ class ExperiencesController < ApplicationController
 
   def destroy
     @experience = Experience.find(params[:id])
-<<<<<<< HEAD
-=======
- 
->>>>>>> master
     @experience.destroy
 
     redirect_to dashboard_path
