@@ -3,7 +3,7 @@ background-color: rgb(244,244,244);
 display:flex ;
   font-size: 24px;
 }
-.my-cards {  
+.my-cards {
   flex-basis: 75%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -14,21 +14,24 @@ display:flex ;
   a{
   text-decoration: none;
   color: rgb(28,49,68);
-   } 
+   }
 }
 
 .page-title{
   text-align: center;
 }
+.max-lines{
+  font-size: 15px;
+}
 
-
-.card{  
+.card{
  display: flex;
   margin: 16px;
-  box-shadow: 4px 4px 4px  rgb(83, 83, 85);
-  justify-content: center;
-  
-  }
+  box-shadow: 0px 2px 7px #c7c7c7;
+
+}
+
+
 
  .card:hover{
     background-color: rgb(63,136,197);
@@ -41,7 +44,7 @@ display:flex ;
   height: 100vh;
   position: sticky;
   top: 200px;
-  
+
   margin-right: 24px;
 }
 #map{
