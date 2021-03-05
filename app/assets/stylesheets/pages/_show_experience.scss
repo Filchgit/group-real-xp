@@ -1,0 +1,53 @@
+.anotherone{
+  margin:300px;
+  background: rgb(221, 215, 215);
+  padding: 20px;
+  min-width: 650px;
+  border-radius: 4px;
+}
+.outer_container{
+ font-size: 30px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.show_container{
+  display: flex;
+  justify-content: center;
+ 
+}
+.central{
+  display: flex;
+  justify-content: center;
+}
+.descriptions{
+  max-width: 1000px;
+}
+.map_portion{
+  margin: 10px;
+  min-width: 500px;
+}
+
+.exp_title{
+  text-align: center;
+}
+.do_stuff{
+ display: flex;
+ justify-content: space-around;
+ font-size: 30px;
+}
+.center_container{
+  display: flex;
+  justify-content: center; 
+}
+.photo_container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  
+}
+.photo{
+  margin: 10px;
+  box-shadow: 4px 4px 4px rgb(141, 141, 141);
+}

@@ -1,0 +1,88 @@
+.content {
+background-color: rgb(244,244,244);
+display:flex ;
+  font-size: 24px;
+}
+.my-cards {  
+  flex-basis: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 16px;
+  margin: 16px;
+
+
+  a{
+  text-decoration: none;
+  color: rgb(28,49,68);
+   } 
+}
+
+.page-title{
+  text-align: center;
+}
+
+
+.card{  
+ display: flex;
+  margin: 16px;
+  box-shadow: 4px 4px 4px  rgb(83, 83, 85);
+  justify-content: center;
+  
+  }
+
+ .card:hover{
+    background-color: rgb(63,136,197);
+    color:cornsilk;
+}
+.mapbox-container {
+  display: flex;
+  grid-template-columns: 1fr;
+  flex-basis: 25%;
+  height: 100vh;
+  position: sticky;
+  top: 200px;
+  
+  margin-right: 24px;
+}
+#map{
+  box-shadow: 4px 4px 4px rgb(83, 83, 85);
+}
+
+#guide-btn{
+  display: flex;
+  justify-content:  center;
+}
+#search-title{
+  display: inline-flexbox;
+  text-align: right;
+}
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .my-cards {
+    grid-template-columns: 1fr;
+  }
+  .mapbox-container {
+    display: none;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .my-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mapbox-container {
+    display: none;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+  .my-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .mapbox-container {
+    display: block;
+  }
+}
