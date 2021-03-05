@@ -13,15 +13,46 @@
     <div class="tab-content" id="v-pills-tabContent">
 
       <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-        <ul class="list-group">
+        <div class="container">
+          <div class="row ">
+            <% @bookings.each do |book| %>
+              <div class="card col-4 p-2 m-4" style="width: 30px;">
+              <% if book.experience.photos.first.nil? == true  %>
+                <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+              <% else %>
+                <% first_photo = book.experience.photos.first  %>
+                  <img class="card-img-top" <%= cl_image_tag first_photo.key,  crop: :fill %>  >
+              <% end %>
+                <div class="card-body">
+                  <h5 class="card-title"><%= book.experience.title %></h5>
+                  <p class="card-text"><%= book.experience.description %></p>
+                  <p class="card-text"><%= book.experience.unit_current_price %></p>
+                  <% book.payment_status = "pending payment" %>
+                  <p class="card-text"><%= book.payment_status %></p>
+                    <h1><%= link_to "cancel booking", booking_path(book), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></h1>
+                    <%= form_tag charges_path do %>
+                    <article>
+                    <% if flash[:error].present? %>
+                      <div id ="error_explanation">
+                      <p><%= flash[:error] %></p>
+                      </div>
+                      <% end %>
+                    <label class = "amount">
+                    <span>Amount: $5.00</span></label>
+                    </article>
 
-          <% @bookings.each do |booking| %>
-          <li class="list-group-item" aria-current="true">
-
-            <h3><%= booking.experience.title %></h3>
-            <p><%= booking.experience.description %> </p>  </li>
-          <% end %>
-        </ul>
+                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                             data-key= "<%= Rails.configuration.stripe[:publishable_key] %>"
+                             data-description= "payment for exp"
+                             data-amount = "500"
+                             data-locale = "auto"
+                    ></script>
+                    <% end %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
       </div>
 
 <!--
@@ -32,6 +63,7 @@
  -->
 
       <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+<<<<<<< HEAD
         <ul class="list-group">
           <% @experiences.each do |experience| %>
            <li class="list-group-item" aria-current="true">
@@ -41,6 +73,28 @@
             </li>
         <% end %>
       </ul>
+=======
+        <div class="container">
+          <div class="row ">
+            <% @experiences.each do |exp| %>
+              <div class="card col-4 p-2 m-4" style="width: 30px;">
+                <% if exp.photos.first.nil? == true  %>
+                  <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+                <% else %>
+                  <% first_photo = exp.photos.first  %>
+                    <img class="card-img-top" <%= cl_image_tag first_photo.key,  crop: :fill %>  >
+                <% end %>
+                <div class="card-body">
+                  <h5 class="card-title"><%= exp.title %></h5>
+                  <p class="card-text"><%= exp.description %></p>
+                  <h1><%= link_to "remove this listing", experience_path(exp), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></h1>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+>>>>>>> master
 
     </div>
   </div>
