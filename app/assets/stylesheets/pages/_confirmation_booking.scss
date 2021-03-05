@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300,600);
+body {
+  background-color: #F4F4F4;
+  color: #474850;
+  font-family: "Titillium Web", sans-serif;
+}
+
+#confirmation-card {
+  background-color: #FFFFFF;
+  width: 500px;
+  margin: 8% auto;
+  padding: 50px;
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#nav-search-bar {
+  margin-top: 10%;
+  /* maybe more */
+}
+
+a {
+  color: #474850;
+}
+
+a:hover {
+  color: dimgrey;
+}
+
+#left-angle {
+  float: left;
+  margin-left: 20%;
+  font-weight: bolder;
+}
+
+#search {
+  float: right;
+  margin-right: 20%;
+  font-weight: lighter;
+}
+
+h1,
+h2,
+p {
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+img {
+  border: 5px solid #474850;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+#less,
+#more {
+  margin-top: 45%;
+  background-color: #FFFFFF;
+  padding: 0;
+  color: #474850;
+  box-shadow: none;
+}
+
+#less:hover,
+#more:hover {
+  color: dimgrey;
+}
+
+#selector p {
+  font-size: 4.8em;
+  font-weight: 600;
+}
+
+input {
+  font-size: 1.5em;
+  font-weight: 600;
+  width: auto;
+  border: none;
+}
+
+button {
+  border-radius: 0;
+  border: 0;
+  background-color: #474850;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 4% 25% 4% 25%;
+  margin-top: 8%;
+  margin-bottom: 14%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:hover {
+  background-color: dimgrey;
+}
