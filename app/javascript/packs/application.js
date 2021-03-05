@@ -9,10 +9,6 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 // import "plugins"
 
-import { initFlatpickr } from "../plugins/flatpickr";
-
-initFlatpickr();
-
 
 
 
@@ -31,10 +27,13 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { initFlatpickr } from "../plugins/flatpickr";
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+
+initFlatpickr();
+
+
 });
 
 
