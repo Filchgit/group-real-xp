@@ -1,11 +1,3 @@
-<%= form_tag experiences_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find An Experience"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
 
 <h1 class="page-title">Xplore our Experiences</h1>
 
@@ -29,7 +21,9 @@
               
               <h2 class="card-title"><%= experience.title %></h2>
               <p class="card-text max-lines"> <%= experience.description %></p>
-             
+              <p> <%= experience.location %></p>
+              <%= experience.latitude %>
+              <%= experience.longitude %>
            
             
             </div>
@@ -45,6 +39,7 @@
   <div id="map"    
       style="width: 100%; height: 600px; margin: 15px;"
       data-markers="<%= @markers.to_json %>"
+     
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
      <div id = "guide-btn"> 
