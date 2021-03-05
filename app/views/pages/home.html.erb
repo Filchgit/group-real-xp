@@ -1,11 +1,28 @@
-<h1>RealXP</h1>
 
-<h3>Xperience</h3>
-<p>Use RealXp to browse for that perfect experience, and get in contact with a guide to make it a reality.</p>
 
-<h3>Xpert</h3>
-<p>For those who can offer the very best guided experience, use RealXP as a platform to get in contact with potential customers.</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80);">
+  <div class="container-fluid">
+    <h1>RealXP</h1>
 
-<br>
+  </div>
 
-<button> <%= link_to "Search Xperiences Now!",  experiences_path%> </button>
+</div>
+<div class="container">
+  <div class="row homePageRow">
+
+    <div class="col-4">
+      <h3 class="homeRowHead">Xperience</h3>
+      <p>Use RealXp to browse for that perfect experience, and get in contact with a guide to make it a reality.</p>
+      <button class="btnHome"> <%= link_to "Search Xperiences",  experiences_path%> </button>
+    </div>
+
+    <div class="col-4">
+      <h3 class="homeRowHead">Xpert</h3>
+      <p>For those who can offer the very best guided experience, use RealXP to get in contact with potential customers.</p>
+      <button class="btnHome"> <%= link_to "Create an Xperience",  new_experience_path%> </button>
+    </div>
+  </div>
+</div>
+
+
+
