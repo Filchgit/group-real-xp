@@ -1,10 +1,11 @@
 .anotherone{
-  margin:300px;
-  background: rgb(221, 215, 215);
-  padding: 20px;
-  min-width: 650px;
-  border-radius: 4px;
-}
+    margin: 0 auto;
+    background: #ddd7d7;
+    padding: 20px;
+    width: 80%;
+    border-radius: 4px;
+  }
+
 .outer_container{
  font-size: 30px;
   margin: 0 auto;
@@ -14,7 +15,7 @@
 .show_container{
   display: flex;
   justify-content: center;
- 
+
 }
 .central{
   display: flex;
@@ -38,14 +39,14 @@
 }
 .center_container{
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 .photo_container{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 1500px;
-  
+
 }
 .photo{
   margin: 10px;

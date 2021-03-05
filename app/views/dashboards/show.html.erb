@@ -18,10 +18,10 @@
             <% @bookings.each do |book| %>
               <div class="card col-4 p-2 m-4" style="width: 30px;">
               <% if book.experience.photos.first.nil? == true  %>
-                <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+                <img class="card-img-top dashImage" src="https://source.unsplash.com/random" alt="Card image cap">
               <% else %>
                 <% first_photo = book.experience.photos.first  %>
-                  <img class="card-img-top" <%= cl_image_tag first_photo.key,  crop: :fill %>  >
+                  <img class="card-img-top dashImage" <%= cl_image_tag first_photo.key,  crop: :fill %>
               <% end %>
                 <div class="card-body">
                   <h5 class="card-title"><%= book.experience.title %></h5>
@@ -67,10 +67,10 @@
             <% @experiences.each do |exp| %>
               <div class="card col-4 p-2 m-4" style="width: 30px;">
                 <% if exp.photos.first.nil? == true  %>
-                  <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+                  <img class="card-img-top dashImage" src="https://source.unsplash.com/random" alt="Card image cap">
                 <% else %>
                   <% first_photo = exp.photos.first  %>
-                    <img class="card-img-top" <%= cl_image_tag first_photo.key,  crop: :fill %>  >
+                    <img class="card-img-top dashImage" <%= cl_image_tag first_photo.key,  crop: :fill %>
                 <% end %>
                 <div class="card-body">
                   <h5 class="card-title"><%= exp.title %></h5>
